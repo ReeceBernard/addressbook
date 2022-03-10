@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Book</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <!-- Headers -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand mr-4"
+                    href="file:///Users/reecebernard/Desktop/address_book/client/index.html">Address Book</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
+                    aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggle">
+                    <div class="navbar-nav mr-auto">
+                        <a class="nav-item nav-link"
+                            href="file:///Users/reecebernard/Desktop/address_book/client/addContact.html">Add
+                            Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main role="main" class="container">
+        <div class="table-container">
+            <h2>Contacts</h2>
+            <div class="row">
+                <div class="container">
+                    <table id="table">
+                        <thead>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>Phone</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </thead>
+                        <tbody></tbody>
+                </div>
+                <section hidden id="update-row">
+                    <div class="form-container">
+                        <form id="form" action="/">
+                            <h1>Update Contact</h1>
+                            <div class="input-control">
+                                <label for="update-name">Name</label>
+                                <input id="update-name" name="update-name" type="text">
+                                <div class="error"></div>
+                            </div>
+                            <div class="input-control">
+                                <label for="update-email">Email</label>
+                                <input id="update-email" name="update-email" type="text">
+                                <div class="error"></div>
+                            </div>
+                            <div class="input-control">
+                                <label for="update-address">Address</label>
+                                <input id="update-address" name="update-address" type="text">
+                                <div class="error"></div>
+                            </div>
+                            <div class="input-control">
+                                <label for="update-phone">Phone</label>
+                                <input id="update-phone" name="phone" type="text">
+                                <div class="error"></div>
+                            </div>
+                            <button id="update-contact-btn" type="submit">Update</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <div class="pagination">
+        <a style="visibility: hidden;" href="javascript:prevPage()" id="btn_prev">Prev</a>
+        <a href="javascript:nextPage()" id="btn_next">Next</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
